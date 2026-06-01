@@ -279,7 +279,7 @@ MonoBehaviour:
     _help: 
     _childParameterIDs: 
     _choiceValue: 0
-    _intValues: 2a000000
+    _intValues: b8000000
     _floatValues: []
     _stringValues: []
     _toggle: 0
@@ -1432,7 +1432,7 @@ Transform:
   m_GameObject: {fileID: 898211975}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7, y: 1.31, z: 3.6}
+  m_LocalPosition: {x: 1.48, y: 1.31, z: -1.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1613,7 +1613,7 @@ Transform:
   m_GameObject: {fileID: 1100046618}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -32.7, y: 0, z: -7.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2045,7 +2045,8 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -2090,7 +2091,7 @@ Material:
     m_Floats:
     - _Metallic: 0
     - _Occlusion: 1
-    - _QueueControl: -1
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.5
     m_Colors:
@@ -2256,7 +2257,7 @@ MonoBehaviour:
   _forceUploadInputs: 0
   _upstreamCookChanged: 0
   _cookStatus: 0
-  _lastCookResult: 1
+  _lastCookResult: 0
   _isCookingAssetReloaded: 0
   _sessionID: 2665260158336
   <WarnedPrefabNotSupported>k__BackingField: 0
