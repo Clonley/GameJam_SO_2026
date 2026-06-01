@@ -1,3 +1,7 @@
 ﻿<Solution>
+  <Project Path="HoudiniEngineUnity.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="HoudiniEngineUnityEditor.csproj" />
+  <Project Path="HoudiniEngineUnity.VisualScripting.csproj" />
+  <Project Path="HoudiniEngineUnityEditor.VisualScripting.csproj" />
 </Solution>
