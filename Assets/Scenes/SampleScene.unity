@@ -1004,6 +1004,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 898211978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1859301282
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1398657161595622965, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: m_Name
+      value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045184817500252014, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"itemName","value":{"$content":"Circle
+        of Truth","$type":"System.String"},"typeHandle":{"Identification":"System.String,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"quanity","value":{"$content":1,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Sprite","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Sprite,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"InventoryManager","value":null,"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"leftOverItems","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045184817500252014, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: _data._objectReferences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045184817500252014, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: '_data._objectReferences.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 4608669529342897769, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.452951
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608669529342897769, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608669529342897769, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.9879584
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608669529342897769, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608669529342897769, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608669529342897769, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608669529342897769, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608669529342897769, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608669529342897769, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608669529342897769, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590895430669460109, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
+      propertyPath: itemDescriptiontext
+      value: 'This is the Circle of truth
+
+'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
 --- !u!1001 &2114685367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1198,3 +1279,4 @@ SceneRoots:
   - {fileID: 898211978}
   - {fileID: 1403975903}
   - {fileID: 1343252815}
+  - {fileID: 1859301282}
