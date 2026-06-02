@@ -1945,7 +1945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   m_moveSpeed: 5
   m_sprintSpeed: 15
-  m_jumpVelocity: 25
+  m_jumpVelocity: 8
   m_jumpCooldown: 0.5
   m_airDamping: 0.5
   maxCameraAngle: 45
