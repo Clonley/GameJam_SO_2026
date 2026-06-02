@@ -5,14 +5,17 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
 {
     private CharacterController m_characterController;
     private PlayerInput m_playerInput;
-    private Transform m_cameraTransform;
-
     private Transform m_playerTransform;
 
     private Vector2 m_Rotation;
 
     public float m_moveSpeed = 5f;
+    public float m_sprintSpeed = 10f;
+    public float m_jumpVelocity = 5f;
+    public float m_jumpCooldown = 0.5f;
+    private float m_lastJumpTime = Mathf.Infinity;
     public float m_airDamping = 0.5f;
+    private float m_yvelocity = 0f;
 
     public float maxCameraAngle = 45f;
 
@@ -27,8 +30,22 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
 
     void Update()
     {
+        if (m_characterController.isGrounded)
+        {
+            m_yvelocity = Mathf.Max(m_yvelocity, -0.1f);
+        }
+        else
+        {
+            m_yvelocity += Physics.gravity.y * Time.deltaTime;
+        }
+        Debug.Log(m_yvelocity.ToString());
         Move();
         Rotate();
+        m_lastJumpTime += Time.deltaTime;
+        if(m_playerInput.actions.FindAction("Jump").WasPressedThisFrame() && m_lastJumpTime >= m_jumpCooldown)
+        {
+            Jump();
+        }
     }
 
     void Move()
@@ -36,15 +53,7 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
         Vector2 moveInput = m_playerInput.actions.FindAction("Move").ReadValue<Vector2>();
         Vector3 moveDirection = new Vector3(moveInput.x, 0, moveInput.y);
         moveDirection = m_playerTransform.TransformDirection(moveDirection);
-
-        if (m_characterController.isGrounded)
-        {
-            m_characterController.Move(moveDirection * m_moveSpeed * Time.deltaTime);
-        }
-        else
-        {
-            m_characterController.Move((new Vector3(0, -9.81f, 0) + moveDirection * m_moveSpeed * m_airDamping) * Time.deltaTime);
-        }
+        m_characterController.Move((new Vector3(0, m_yvelocity, 0) + moveDirection * (m_playerInput.actions.FindAction("Sprint").IsPressed() ? m_sprintSpeed : m_moveSpeed) * m_airDamping) * Time.deltaTime);
     }
 
     void Rotate()
@@ -58,5 +67,14 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
         Vector3 camEuler = Camera.main.transform.rotation.eulerAngles;
         camEuler.x = m_Rotation.x;
         Camera.main.transform.rotation = Quaternion.Euler(camEuler);
+    }
+
+    void Jump()
+    {
+        if (m_characterController.isGrounded)
+        {
+            m_yvelocity = m_jumpVelocity;
+            m_lastJumpTime = 0f;
+        }
     }
 }
