@@ -1685,7 +1685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3045184817500252014, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
       propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"itemName","value":{"$content":"Stick","$type":"System.String"},"typeHandle":{"Identification":"System.String,
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"itemName","value":{"$content":"Stone","$type":"System.String"},"typeHandle":{"Identification":"System.String,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"quanity","value":{"$content":1,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Sprite","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Sprite,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"InventoryManager","value":null,"typeHandle":{"Identification":"UnityEngine.GameObject,
@@ -3221,7 +3221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3045184817500252014, guid: 8c2a3b4231010014ca56f3faab7d662c, type: 3}
       propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"itemName","value":{"$content":"Rock","$type":"System.String"},"typeHandle":{"Identification":"System.String,
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"itemName","value":{"$content":"Stone","$type":"System.String"},"typeHandle":{"Identification":"System.String,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"quanity","value":{"$content":1,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Sprite","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Sprite,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"InventoryManager","value":null,"typeHandle":{"Identification":"UnityEngine.GameObject,
@@ -3758,7 +3758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1305530025110999473, guid: 60ae395a0aa41b149b05592abee2340e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000030517578
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 1305530025110999473, guid: 60ae395a0aa41b149b05592abee2340e, type: 3}
       propertyPath: m_AnchoredPosition.y
