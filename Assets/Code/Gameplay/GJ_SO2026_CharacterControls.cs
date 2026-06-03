@@ -38,7 +38,6 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
         {
             m_yvelocity += Physics.gravity.y * Time.deltaTime;
         }
-        Debug.Log(m_yvelocity.ToString());
         Move();
         Rotate();
         m_lastJumpTime += Time.deltaTime;
