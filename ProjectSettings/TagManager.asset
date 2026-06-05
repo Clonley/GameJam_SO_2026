@@ -8,6 +8,7 @@ TagManager:
   - Enviromental_Attack
   - Stone
   - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX
