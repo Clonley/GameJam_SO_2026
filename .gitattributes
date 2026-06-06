@@ -172,3 +172,5 @@ LightingData.asset     binary
 
 Assets/Plugins/FMOD/**/*.bundle text eol=lf
 Assets/Plugins/FMOD/**/Info.plist text eol=lf
+
+Assets/HoudiniEngineAssetCache/Baked/GJ_DungeonGen_1_18/Meshes/** filter=lfs diff=lfs merge=lfs - text

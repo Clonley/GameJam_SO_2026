@@ -19,23 +19,27 @@ namespace EscapeVelocity
         public float Duration = 0.5f;
         public AnimationCurve EasingCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
+        public bool openAtEnable = false;
+
         private Vector2 initialPosition;
         private Vector2 initialScale;
         private Vector3 initialRotation;
         private RectTransform rectTransform;
         private CanvasGroup canvasGroup;
 
-        public bool isOpen;
+        [HideInInspector]public bool isOpen;
 
-        void Start()
+        private void Awake()
         {
             InitializeVariables();
-            isOpen = TargetObject.activeSelf;
+            isOpen = openAtEnable;
+            Initialize(openAtEnable ? 1 : 0, !openAtEnable);
         }
 
-        private void OnValidate()
+        private void OnEnable()
         {
-            InitializeVariables();
+            isOpen = openAtEnable;
+            Initialize(openAtEnable ? 1 : 0, !openAtEnable);
         }
 
         public void TweenIn()
@@ -102,7 +106,7 @@ namespace EscapeVelocity
 
             while (i<Duration)
             {
-                i += Time.deltaTime;
+                i += Time.unscaledDeltaTime;
                 t = EasingCurve.Evaluate(i / Duration);
 
                 rectTransform.localPosition = Vector2.Lerp(initialPosition, targetPosition, t);
@@ -125,6 +129,9 @@ namespace EscapeVelocity
             canvasGroup.alpha = targetAlpha;
             canvasGroup.interactable = !invert;
             TargetObject.SetActive(!invert);
+            rectTransform.localPosition = initialPosition;
+            rectTransform.localScale = initialScale;
+            rectTransform.localRotation = Quaternion.Euler(new Vector3(0, 0, initialRotation.z));
         }
     }
 }
