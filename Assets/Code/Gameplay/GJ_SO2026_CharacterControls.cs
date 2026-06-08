@@ -11,10 +11,9 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
 
     public float m_moveSpeed = 5f;
     public float m_sprintSpeed = 10f;
-    public float m_jumpVelocity = 5f;
-    public float m_jumpCooldown = 0.5f;
-    private float m_lastJumpTime = Mathf.Infinity;
+    public float m_jumpVelocity = 3f;
     public float m_airDamping = 0.5f;
+    public float gravityMultiplier = 2.5f;
     private float m_yvelocity = 0f;
 
     public float maxCameraAngle = 45f;
@@ -30,18 +29,17 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
 
     void Update()
     {
-        if (m_characterController.isGrounded&& !m_playerInput.actions.FindAction("Jump").WasPressedThisFrame())
+        if (m_characterController.isGrounded)
         {
-            m_yvelocity = -0.1f;
+            m_yvelocity = -2f;
         }
         else
         {
-            m_yvelocity += Physics.gravity.y * Time.deltaTime;
+            m_yvelocity += Physics.gravity.y * gravityMultiplier * Time.deltaTime;
         }
         Move();
         Rotate();
-        m_lastJumpTime += Time.deltaTime;
-        if(m_playerInput.actions.FindAction("Jump").WasPressedThisFrame() && m_lastJumpTime >= m_jumpCooldown)
+        if(m_playerInput.actions.FindAction("Jump").WasPressedThisFrame())
         {
             Jump();
         }
@@ -50,9 +48,25 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
     void Move()
     {
         Vector2 moveInput = m_playerInput.actions.FindAction("Move").ReadValue<Vector2>();
-        Vector3 moveDirection = new Vector3(moveInput.x, 0, moveInput.y);
-        moveDirection = m_playerTransform.TransformDirection(moveDirection);
-        m_characterController.Move((new Vector3(0, m_yvelocity, 0) + moveDirection * (m_playerInput.actions.FindAction("Sprint").IsPressed() ? m_sprintSpeed : m_moveSpeed) * m_airDamping) * Time.deltaTime);
+
+        bool isSprinting = m_playerInput.actions.FindAction("Sprint").IsPressed();
+
+        float forwardSpeed = isSprinting ? m_sprintSpeed : m_moveSpeed;
+        float strafeSpeed = m_moveSpeed; // no sprint sideways
+
+        Vector3 localMove = new Vector3(moveInput.x * strafeSpeed, 0f, moveInput.y * forwardSpeed);
+
+        Vector3 moveDirection = m_playerTransform.TransformDirection(localMove);
+
+        Vector3 horizontal = new Vector3(moveDirection.x, 0f, moveDirection.z);
+
+        if (!m_characterController.isGrounded) horizontal *= m_airDamping;
+
+        moveDirection = horizontal + Vector3.up * m_yvelocity;
+
+        moveDirection.y = m_yvelocity;
+
+        m_characterController.Move(moveDirection * Time.deltaTime);
     }
 
     void Rotate()
@@ -73,7 +87,7 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
         if (m_characterController.isGrounded)
         {
             m_yvelocity = m_jumpVelocity;
-            m_lastJumpTime = 0f;
+            m_characterController.Move(Vector3.up * m_yvelocity * Time.deltaTime);
         }
     }
 }
