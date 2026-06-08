@@ -11,6 +11,7 @@ namespace EscapeVelocity
         public UITweening settingsTween;
         public Button settingsAudioButton;
         public Button playButton;
+        public GameObject menuButtons;
         public void QuitGame()
         {
             Application.Quit();
@@ -23,11 +24,13 @@ namespace EscapeVelocity
 
         public void OpenSettings()
         {
+            menuButtons.SetActive(false);
             settingsTween.TweenIn();
             EventSystem.current.SetSelectedGameObject(settingsAudioButton.gameObject);
         }
         public void CloseSettings()
         {
+            menuButtons.SetActive(true);
             settingsTween.TweenOut();
             EventSystem.current.SetSelectedGameObject(playButton.gameObject);
         }
