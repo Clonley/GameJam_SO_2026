@@ -30,9 +30,9 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
 
     void Update()
     {
-        if (m_characterController.isGrounded)
+        if (m_characterController.isGrounded&& !m_playerInput.actions.FindAction("Jump").WasPressedThisFrame())
         {
-            m_yvelocity = Mathf.Max(m_yvelocity, -0.1f);
+            m_yvelocity = -0.1f;
         }
         else
         {
