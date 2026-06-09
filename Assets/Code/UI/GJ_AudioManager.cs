@@ -4,6 +4,7 @@ public class GJ_AudioManager : MonoBehaviour
 {
     public AudioSource musicSource;
     public AudioSource ambianceSource;
+    public AudioSource oneShotSource;
     public AudioClip musicClip;
     public AudioClip ambianceClip;
     
@@ -29,7 +30,7 @@ public class GJ_AudioManager : MonoBehaviour
     {
         if (clip != null)
         {
-            musicSource.PlayOneShot(clip);
+            oneShotSource.PlayOneShot(clip);
         }
     }
 }

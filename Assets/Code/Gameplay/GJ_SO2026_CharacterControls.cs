@@ -14,6 +14,9 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
     public float m_jumpVelocity = 3f;
     public float m_airDamping = 0.5f;
     public float gravityMultiplier = 2.5f;
+    public AudioClip[] m_footstepClips;
+    public GJ_AudioManager m_audioManager;
+    public float footstepInterval = 0.5f;
     private float m_yvelocity = 0f;
 
     public float maxCameraAngle = 45f;
@@ -43,6 +46,7 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
         {
             Jump();
         }
+        FootstepAudio();
     }
 
     void Move()
@@ -88,6 +92,23 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
         {
             m_yvelocity = m_jumpVelocity;
             m_characterController.Move(Vector3.up * m_yvelocity * Time.deltaTime);
+        }
+    }
+
+    void FootstepAudio()
+    {
+        float counter = 0f;
+        if (m_characterController.isGrounded && m_playerInput.actions.FindAction("Move").IsPressed())
+        {
+            while (counter < footstepInterval*Mathf.Lerp(m_sprintSpeed/m_moveSpeed, 1, m_playerInput.actions.FindAction("Sprint").IsPressed() ? 0f : 1f))
+            {
+                int index = Random.Range(0, m_footstepClips.Length);
+                AudioClip clip = m_footstepClips[index];
+                if (m_audioManager != null)
+                {
+                    m_audioManager.PlayOneshot(clip);
+                }
+            }
         }
     }
 }
