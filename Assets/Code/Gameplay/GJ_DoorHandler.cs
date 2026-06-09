@@ -62,7 +62,17 @@ public class GJ_DoorHandler : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         if (m_autoActivateParented)
         {
+            m_linkedDoor.StartCoroutine(DoorInteraction());
             m_linkedDoor.StartInteraction();
+        }
+    }
+
+    public void StopInteraction()
+    {
+        if (interactionRoutine != null)
+        {
+            StopCoroutine(interactionRoutine);
+            interactionRoutine = null;
         }
     }
     public void StartInteraction()
