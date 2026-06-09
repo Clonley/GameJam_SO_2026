@@ -11,6 +11,8 @@ public class GJ_SettingsController : MonoBehaviour
     public Slider masterSlider;
     public Slider musicSlider;
     public Slider sfxSlider;
+    public Slider uiSlider;
+
 
     [Header("Controls Settings")]
     public InputActionReference lookAction;
@@ -38,6 +40,13 @@ public class GJ_SettingsController : MonoBehaviour
         PlayerPrefs.SetFloat("SFXVolume", volume);
     }
 
+    public void SetUIVolume()
+    {
+        float volume = uiSlider.value;
+        audioMixer.SetFloat("UIVolume", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat("UIVolume", volume);
+    }
+
     void Start()
     {
         if(PlayerPrefs.HasKey("MasterVolume"))
@@ -49,10 +58,12 @@ public class GJ_SettingsController : MonoBehaviour
             SetMasterVolume();
             SetSFXVolume();
             SetMusicVolume();
+            SetUIVolume();
         }
         masterSlider.onValueChanged.AddListener(delegate { SetMasterVolume(); });
         musicSlider.onValueChanged.AddListener(delegate { SetMusicVolume(); });
         sfxSlider.onValueChanged.AddListener(delegate { SetSFXVolume(); });
+        uiSlider.onValueChanged.AddListener(delegate { SetUIVolume(); });
 
         sensitivitySlider.onValueChanged.AddListener(delegate { SetSensitivity(); });
         invertYToggle.onValueChanged.AddListener(delegate { SetYInvert(); });
@@ -116,9 +127,11 @@ public class GJ_SettingsController : MonoBehaviour
         masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1f);
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1f);
         sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        uiSlider.value = PlayerPrefs.GetFloat("UIVolume", 1f);
 
         SetMasterVolume();
         SetMusicVolume();
         SetSFXVolume();
+        SetUIVolume();
     }
 }
