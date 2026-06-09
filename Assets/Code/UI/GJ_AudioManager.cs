@@ -6,7 +6,7 @@ public class GJ_AudioManager : MonoBehaviour
     public AudioSource ambianceSource;
     public AudioClip musicClip;
     public AudioClip ambianceClip;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         if(musicSource != null) 
@@ -21,6 +21,15 @@ public class GJ_AudioManager : MonoBehaviour
             ambianceSource.clip = ambianceClip;
             ambianceSource.loop = true;
             ambianceSource.Play();
+        }
+    }
+
+
+    public void PlayOneshot(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            musicSource.PlayOneShot(clip);
         }
     }
 }
