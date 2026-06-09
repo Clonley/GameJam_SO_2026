@@ -95,20 +95,30 @@ public class GJ_SO2026_CharacterControls : MonoBehaviour
         }
     }
 
+    private float footstepTimer;
+
     void FootstepAudio()
     {
-        float counter = 0f;
         if (m_characterController.isGrounded && m_playerInput.actions.FindAction("Move").IsPressed())
         {
-            while (counter < footstepInterval*Mathf.Lerp(m_sprintSpeed/m_moveSpeed, 1, m_playerInput.actions.FindAction("Sprint").IsPressed() ? 0f : 1f))
+            float interval = footstepInterval;
+
+            if (m_playerInput.actions.FindAction("Sprint").IsPressed()) interval *= m_moveSpeed / m_sprintSpeed;
+
+            footstepTimer += Time.deltaTime;
+
+            if (footstepTimer >= interval)
             {
+                footstepTimer = 0f;
+
                 int index = Random.Range(0, m_footstepClips.Length);
-                AudioClip clip = m_footstepClips[index];
-                if (m_audioManager != null)
-                {
-                    m_audioManager.PlayOneshot(clip);
-                }
+
+                if (m_audioManager != null) m_audioManager.PlayOneshot(m_footstepClips[index]);
             }
+        }
+        else
+        {
+            footstepTimer = 0f;
         }
     }
 }
