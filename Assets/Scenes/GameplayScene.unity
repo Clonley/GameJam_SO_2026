@@ -1736,6 +1736,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499778112}
   m_CullTransparentMesh: 1
+--- !u!114 &505876141 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3082657683357232295, guid: 1b1281edd219d854cb4aebe5ce05b1de, type: 3}
+  m_PrefabInstance: {fileID: 984693967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d64e65d6b86774f92a6a5d56d0f54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GJ_DoorHandler
 --- !u!1 &533778389
 GameObject:
   m_ObjectHideFlags: 0
@@ -6131,17 +6142,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3082657683357232295, guid: 1b1281edd219d854cb4aebe5ce05b1de, type: 3}
+      propertyPath: m_linkedDoor
+      value: 
+      objectReference: {fileID: 1948962614}
     - target: {fileID: 3489491773917923338, guid: 1b1281edd219d854cb4aebe5ce05b1de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.59
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3489491773917923338, guid: 1b1281edd219d854cb4aebe5ce05b1de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.41
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3489491773917923338, guid: 1b1281edd219d854cb4aebe5ce05b1de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -69.17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5253676582275864468, guid: 1b1281edd219d854cb4aebe5ce05b1de, type: 3}
       propertyPath: m_Name
@@ -9977,6 +9992,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3171225109991392871, guid: 7ca42fc3cfadb834ab1eeea04e999d25, type: 3}
   m_PrefabInstance: {fileID: 1882852581}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1948962614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3082657683357232295, guid: 1b1281edd219d854cb4aebe5ce05b1de, type: 3}
+  m_PrefabInstance: {fileID: 2114166809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d64e65d6b86774f92a6a5d56d0f54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GJ_DoorHandler
 --- !u!1 &1980202196
 GameObject:
   m_ObjectHideFlags: 0
@@ -10587,17 +10613,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3082657683357232295, guid: 1b1281edd219d854cb4aebe5ce05b1de, type: 3}
+      propertyPath: m_linkedDoor
+      value: 
+      objectReference: {fileID: 505876141}
     - target: {fileID: 3489491773917923338, guid: 1b1281edd219d854cb4aebe5ce05b1de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.044
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3489491773917923338, guid: 1b1281edd219d854cb4aebe5ce05b1de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.736
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3489491773917923338, guid: 1b1281edd219d854cb4aebe5ce05b1de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 71.249
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5253676582275864468, guid: 1b1281edd219d854cb4aebe5ce05b1de, type: 3}
       propertyPath: m_Name

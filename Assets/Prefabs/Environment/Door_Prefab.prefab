@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5009602516238215312}
-  m_Layer: 0
+  - component: {fileID: 5390211830263710261}
+  - component: {fileID: 51503229341348684}
+  m_Layer: 7
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,6 +34,43 @@ Transform:
   - {fileID: 5982451197331345623}
   m_Father: {fileID: 8827184968337544917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5390211830263710261
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721158965486125099}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.55782, y: 3.6443443, z: 0.44425964}
+  m_Center: {x: 0.053856015, y: 1.3221722, z: -3.087944}
+--- !u!114 &51503229341348684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721158965486125099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.VisualScripting.Core::Unity.VisualScripting.Variables
+  _data:
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"InteractionCode","value":{"$content":"Door","$type":"System.String"},"typeHandle":{"Identification":"System.String,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
 --- !u!1 &1825537386022538445
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,7 +114,7 @@ GameObject:
   - component: {fileID: 6517609933168518302}
   - component: {fileID: 3082657683357232295}
   - component: {fileID: 6309467396560146576}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Door_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
