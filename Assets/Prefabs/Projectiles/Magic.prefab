@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1692039217297700448}
   - component: {fileID: -252123113687316995}
   - component: {fileID: 6794167815493522476}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Magic
   m_TagString: Enemy_Attack
   m_Icon: {fileID: 0}

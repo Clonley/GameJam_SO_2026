@@ -1458,6 +1458,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 800600303}
     m_Modifications:
+    - target: {fileID: 1357524622976275394, guid: 55c1f5a0236edfe43ac70f24b2cc2e92, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493363184234925968, guid: 55c1f5a0236edfe43ac70f24b2cc2e92, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 1852796397405367103, guid: 55c1f5a0236edfe43ac70f24b2cc2e92, type: 3}
       propertyPath: m_LocalPosition.x
       value: 74.28
@@ -1501,6 +1509,10 @@ PrefabInstance:
     - target: {fileID: 7037572838265362181, guid: 55c1f5a0236edfe43ac70f24b2cc2e92, type: 3}
       propertyPath: m_Name
       value: GJ_DungeonGen_1_26 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037572838265362181, guid: 55c1f5a0236edfe43ac70f24b2cc2e92, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13143,6 +13155,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GJ_DungeonGen_1_26
       objectReference: {fileID: 0}
+    - target: {fileID: 375168944282648285, guid: abd4b77f161698a47a6f9ac6eaf69b97, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 2223899312637533002, guid: abd4b77f161698a47a6f9ac6eaf69b97, type: 3}
       propertyPath: m_LocalPosition.x
       value: 74.28
@@ -13182,6 +13198,14 @@ PrefabInstance:
     - target: {fileID: 2223899312637533002, guid: abd4b77f161698a47a6f9ac6eaf69b97, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322621145958335227, guid: abd4b77f161698a47a6f9ac6eaf69b97, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 5044960099202648888, guid: abd4b77f161698a47a6f9ac6eaf69b97, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
