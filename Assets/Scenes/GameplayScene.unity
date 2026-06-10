@@ -8495,6 +8495,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6696565232703534382, guid: cd721315981535940b8b5ed5964b5bc9, type: 3}
   m_PrefabInstance: {fileID: 874654394}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &878466305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 878466306}
+  - component: {fileID: 878466308}
+  - component: {fileID: 878466307}
+  m_Layer: 0
+  m_Name: Scatter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &878466306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878466305}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &878466307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878466305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81ea6fd2a4e44645b99d4e2b573e409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScatterInitiator
+  scatterName: Vines1
+  randomSamples: 10
+  distanceFalloff: 1
+  frustrumPadding: 0.05
+  drawInstanceGizmos: 0
+--- !u!114 &878466308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878466305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81ea6fd2a4e44645b99d4e2b573e409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScatterInitiator
+  scatterName: Vines0
+  randomSamples: 10
+  distanceFalloff: 1
+  frustrumPadding: 0.05
+  drawInstanceGizmos: 0
 --- !u!1 &882614720
 GameObject:
   m_ObjectHideFlags: 0
@@ -27764,3 +27831,4 @@ SceneRoots:
   - {fileID: 1502036965}
   - {fileID: 4838152762116247639}
   - {fileID: 608907523}
+  - {fileID: 878466306}
