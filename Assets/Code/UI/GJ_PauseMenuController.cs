@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static UnityEditor.FilePathAttribute;
 
 public class GJ_PauseMenuController : MonoBehaviour
 {
