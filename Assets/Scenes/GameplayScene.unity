@@ -5163,7 +5163,8 @@ MonoBehaviour:
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"currentHunger","value":{"$content":120,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"maxHunger","value":{"$content":120,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"AudioManager","value":{"$content":6,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"GJ_AudioManager,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Deathscript","value":{"$content":7,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.MonoBehaviour,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 898211975}
     - {fileID: 973310778}
@@ -5172,6 +5173,7 @@ MonoBehaviour:
     - {fileID: 773096786}
     - {fileID: 352644933}
     - {fileID: 1563108151}
+    - {fileID: 898211984}
 --- !u!4 &1343252815
 Transform:
   m_ObjectHideFlags: 0
@@ -5759,9 +5761,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 1.2
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 1.2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
